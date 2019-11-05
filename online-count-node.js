@@ -6,7 +6,8 @@ cron.schedule('*/1 * * * * *', () => {
 	console.log(new Date());
 
 	var https = require('https');
-	var url = "https://api.live.bilibili.com/room/v1/Room/getRoomInfoOld?mid=452189";
+	var mid = "10072709";//チャンネルId
+	var url = "https://api.live.bilibili.com/room/v1/Room/getRoomInfoOld?mid="+mid;
 	var data = [];
 
 	https.get(url, function (res) {
@@ -20,6 +21,7 @@ cron.schedule('*/1 * * * * *', () => {
 				var titleName = jsonData["title"]
 				console.log(titleName);
 				console.log("Online: " +onlineCount + "人");
+				//ここで何かする
 			} catch(e) {
 				console.log(e);
 			}
