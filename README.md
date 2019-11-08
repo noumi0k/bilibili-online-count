@@ -9,8 +9,10 @@ https://space.bilibili.com/(ここがチャンネルID)/
 
 ## 事前準備(node.js版)
 とりあえずnode環境整えてから下記でnode-cronを入れれば動くはず
+```
 $ npm init -y
 $ npm i node-cron
+```
 
 ## 各種ファイルの説明
 ### online-count-node.js
